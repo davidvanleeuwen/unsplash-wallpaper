@@ -9,7 +9,7 @@
     "pify": "^2.2.0",
     "request": "^2.61.0",
     "request-progress": "^0.3.1",
-    "wallpaper": "^2.0.0"
+    "wallpaper-macos": "^1.0.4"
   },
   "repository": {
     "type": "git",
@@ -34,7 +34,10 @@
     "prettier:all": "prettier --single-quote --write \"{{lib,test}/*.js,*.js}\""
   },
   "lint-staged": {
-    "*.js": ["prettier --write --single-quote", "git add"]
+    "*.js": [
+      "prettier --write --single-quote",
+      "git add"
+    ]
   },
   "devDependencies": {
     "ava": "^0.2.0",

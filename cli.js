@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 
-const wallpaper = require('wallpaper');
+const wallpaper = require('wallpaper-macos');
 const minimist = require('minimist');
 const lib = require('./lib');
 const { boolOptions, minimistAliases, triggerDownload } = require('./lib/args');
@@ -54,7 +54,7 @@ if (shouldSave || shouldDownload) {
         .download(opts, url, reporter)
         .then(filename => {
           success(`Image saved to ${filename}`);
-          return wallpaper.set(filename);
+          return wallpaper.setOnAllSpaces(filename);
         })
         .then(() => log('Check it out.'))
         .catch(err => {
